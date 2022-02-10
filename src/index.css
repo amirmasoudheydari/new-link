@@ -89,6 +89,7 @@ input::placeholder{
   color: white;
   padding: 5px 20px;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .control button:nth-child(2){
@@ -96,6 +97,7 @@ input::placeholder{
   color:rgb(51, 61, 71);
   padding: 5px 20px;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 li{

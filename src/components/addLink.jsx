@@ -17,7 +17,7 @@ export default function addLink(props) {
 
         <input value={props.userLink}  onChange={(e) => props.handelClick(null,e.target.value,null)} type="text" placeholder='لینک را وارد کنید' />
         
-        <input value={props.userId}  onChange={(e) => props.handelClick(null,null,e.target.value)} type="number" placeholder='id را وارد کنید' />
+        <input value={props.userId}  onChange={(e) => props.handelClick(null,null,e.target.value)} type="text" placeholder='id را وارد کنید' />
 
       </div>
 

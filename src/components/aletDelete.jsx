@@ -2,7 +2,10 @@ import React,{useState} from 'react';
 
 export default function AletDelete(props) {
   const [active,setActive] = useState(true)
+  const [value,setValue] = useState('')
   function handelDelete(e){
+    setValue(e.target.value)
+
     if(e.target.value === 'تایید'){
       setActive(false)
     }else{
@@ -14,9 +17,9 @@ export default function AletDelete(props) {
     <div className='delete'>
       <h3>ایا از تصمیم خود مطمئن هستید</h3>
       <p>برای حذف ایتم کلمه تایید را بنویسید</p>
-      <input onChange={handelDelete} type="text" />
+      <input value={value}  onChange={handelDelete} type="text" />
       <button onClick={() => props.cancel(true)}>انصراف</button>
-      <button onClick={() => !active ? props.deleteLink(null,true) : alert('مقدار صحیح را وارد کنید')} disabled={active} >حذف</button>
+      <button onClick={() => {!active ? props.deleteLink(null,true) : alert('مقدار صحیح را وارد کنید');setValue('')}} disabled={active} >حذف</button>
     </div>
   </div>;
 }

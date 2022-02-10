@@ -85,6 +85,7 @@ export default function CreateLink() {
 
   function edite(link) {
     setIsEdite(true)
+    setIsAdd(true)
     setUserSocialNetwork(link.userSocialNetwork)
     setUserLink(link.userLink)
     setUserId(link.userId)
